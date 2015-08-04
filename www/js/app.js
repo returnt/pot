@@ -5,6 +5,8 @@
 // the 2nd parameter is an array of 'requires'
 var starter = angular.module('starter', ['ionic'])
 
+
+
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
 
@@ -18,6 +20,10 @@ var starter = angular.module('starter', ['ionic'])
 
     }
   });
+<<<<<<< HEAD
+})
+
+=======
 });
 
 starter.controller('mainController', function($http, $scope){
@@ -34,3 +40,4 @@ starter.controller('mainController', function($http, $scope){
             });
     };
 });
+>>>>>>> d46a25930cfe72155602e95d287e02e6879f301b
