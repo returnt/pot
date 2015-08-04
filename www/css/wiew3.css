@@ -7,6 +7,10 @@ html {
 .bar-header{
    position: relative;
 }
+
+.gl_ekran{
+    position: relative;
+}
 .list{
     position: relative;
     padding-top:45px;
@@ -25,7 +29,6 @@ html {
 .next{
     text-align: center;
 }
-
 .back_button{
     background: none;
     border: none;
@@ -37,5 +40,9 @@ html {
 .content_center{
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.item-text-wrap{
+    position: relative;
 }
 

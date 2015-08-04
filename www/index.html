@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title></title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=yes, width=device-width">
+    <title>Главный екран</title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/parameters_of_the_ceiling_1.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/wiew3.css">
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
@@ -16,20 +17,57 @@
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
-    <script src="cordova.js"></script>
+    <!--<script src="cordova.js"></script>-->
 
     <!-- your app's js -->
 
-  </head>
-  <body ng-app="starter">
+    <!--<script src="js/app.js"></script>-->
+    <script src="js/app.js"></script>
 
-    <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
-      </ion-header-bar>
-      <ion-content>
-        <dlorem>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, asperiores delectus dolore eligendi excepturi explicabo illum ipsam magnam, <nostlorem>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus ad atque commodi consequatur eaque, eveniet, facere illum ipsum modi non optio quos repellat repudiandae suscipit unde voluptas? Laboriosam, <pariatur class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio placeat ut vel! Alias aperiam cumque dolor eos explicabo illum inventore iure minima, numquam omnis perferendis possimus, quaerat quia vero <voluptates class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, cupiditate repellendus? Ab autem eaque laborum quisquam! Accusamus aspernatur rerum unde! Asperiores laboriosam, magnam natus nostrum optio perferendis saepe soluta <totam class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem, cumque eius esse, eum hic incidunt, ipsum itaque magnam maxime minima minus nam non officia placeat possimus quidem ratione <velit class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi laudantium odio quasi quod vel. Dolorem quia rem similique temporibus! Ipsam quasi velit voluptas voluptatum. Atque laudantium minima quasi totam veritatis?</velit></totam></voluptates></pariatur></nostlorem>rum nulla possimus quasi qui quidem sit tempora tenetur veniam voluptates voluptatum.</dlorem>
-      </ion-content>
-    </ion-pane>
-  </body>
+</head>
+<body ng-app="starter">
+
+<ion-pane>
+
+        <div class="bar bar-header bar-balanced">
+            <button class="back_button" onclick="back()">
+            </button>
+            <h1 class="title">Калькулятор</h1>
+        </div>
+
+
+        <div class="item item-text-wrap">
+            <div class="info">Данный калькулятор – позволяет быстро произвести расчеты:
+                <ul>
+                    <li> Размеров потолка;</li>
+                    <li> Количество комплектующих;</li>
+                    <li> Цену;</li>
+                </ul>
+                Все расчеты имеют оценочный характер, без учета формы помещения.
+            </div>
+        </div>
+
+            <div class="item item-text-wrap"><div class="info2">Все расчеты можно выслать себе на E-mail.</div>
+            </div>
+
+    <div class="item item-text-wrap">
+            <div class="info3">Позвоните нам:<br>
+                +7 (499) 643-46-33<br>
+                +7 (499) 643-46-38
+            </div>
+    </div>
+
+    <button class="button button-balanced button-large">
+        Далее
+    </button>
+
+        <ion-footer-bar>
+            <div class="bar bar-footer bar-balanced">
+                <div class="title">&copy;AstaM 2015</div>
+            </div>
+
+        </ion-footer-bar>
+</ion-pane>
+
+</body>
 </html>
