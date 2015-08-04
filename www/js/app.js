@@ -17,3 +17,14 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+
+
+function next()
+{
+  window.location = "https://toster.ru/q/214529";
+}
+
+function back()
+{
+  window.location = "https://docs.angularjs.org/api/";
+}
