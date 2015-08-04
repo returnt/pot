@@ -20,11 +20,9 @@ var starter = angular.module('starter', ['ionic'])
 
     }
   });
-<<<<<<< HEAD
+
 })
 
-=======
-});
 
 starter.controller('mainController', function($http, $scope){
 
@@ -40,4 +38,4 @@ starter.controller('mainController', function($http, $scope){
             });
     };
 });
->>>>>>> d46a25930cfe72155602e95d287e02e6879f301b
+
