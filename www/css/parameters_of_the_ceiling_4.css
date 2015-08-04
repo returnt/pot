@@ -1,35 +1,17 @@
 .sel_1{
-    width: 300px; /* Ширина элемента в пикселах */
+    width: 90%;
     padding: 10px; /* Поля вокруг текста */
     display: inline-block;
     text-align: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    background: #fc0;
-    color: #000000;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #49BB3E;
 
 }
-#nazad_header_okna{
-    margin: 0px auto;
-    color: #333333;
-    font-style: normal;
-    text-align: center;
-}
+
 .center{
     text-align: center;
 }
-.option{
-    width: 200px;
-}
-.submit{
-    float: right;
-    background-color: #CEECF5;
-    color: #333;
-    font-family: verdana, arial, helvetica, sans-serif;
-    font-size: 20px;
-    line-height: 30px;
-    margin-top: 10px;
-    margin-right: 5px;
-}
+
 
 

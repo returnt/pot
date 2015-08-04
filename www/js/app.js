@@ -24,22 +24,6 @@ var starter = angular.module('starter', ['ionic'])
 })
 
 
-
-function next1()
-{
-  window.location = "parameters_of_the_ceiling_1.html";
-}
-
-function next2()
-{
-    window.location = "index3";
-}
-
-function back()
-{
-  window.location = "https://docs.angularjs.org/api/";
-}
-
 starter.controller('mainController', function($http, $scope){
 
     $scope.submit = function(email, tel, cost){
