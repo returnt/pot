@@ -20,17 +20,39 @@ var starter = angular.module('starter', ['ionic'])
   });
 });
 
+//senâ email controller
 starter.controller('mainController', function($http, $scope){
-
-    $scope.submit = function(email, tel, cost){
+    // on-click send email
+    $scope.submit = function(email, tel, cost, select){
+        //URL send email
         $http.post('http://pot.returnt.ru/mail.php', {
             submits: true, mail: email,
             tel: tel, cost: cost
-            })
-            .success(function(data){
+            }).success(function(data){
+            //success post request
                 console.log(data);
             }).error(function(data){
+            //error
                 console.log(data);
             });
     };
+});
+
+starter.controller('tesst', function($scope, $ionicModal){
+    $ionicModal.fromTemplateUrl('index2.html', function(modal){
+        $scope.taskModal = modal;
+    },{
+        scope: $scope,
+        animation: 'slide-in-left'
+
+    });
+
+    $scope.openTask = function(){
+        $scope.taskModal.show();
+    }
+
+    $scope.closeTask = function(){
+        $scope.taskModal.hide();
+    }
+
 });
