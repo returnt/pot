@@ -2,7 +2,7 @@
   <link href="www/css/parameters_of_the_ceiling_1.css" rel="stylesheet">
   <link rel="stylesheet" href="www/css/wiew3.css">
 
-<ion-header-bar class="bar bar-header bar-balanced">
+<ion-header-bar class="bar bar-header bar-balanced" style="background-color: #233c7f;">
 
   <button class="back_button" ng-click="closeTask()">
     <i class="ion-chevron-left"></i>
@@ -32,17 +32,23 @@
     <!--<input type="text" placeholder="Площадь" disabled>-->
     <p id="area"></p>
   </label>
+
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Площадь многоугольного потолка(м²)</span>
+    <input type="number" min="1" id="area_another" placeholder="Введите площадь многоугольного потолка (м²)">
+  </label>
+
 </div>
 
 <div class="next">
-  <button class="button button-balanced" ng-click="openTask()">
+  <button class="button button-balanced" ng-click="openTask()" style="background-color: #233c7f;">
     Далеe
   </button>
 </div>
     </ion-content>
 
   <ion-footer-bar>
-<div class="bar bar-footer bar-balanced">
+<div class="bar bar-footer bar-balanced" style="background-color: #233c7f;">
   <div class="title">&copy;AstaM 2015</div>
 </div>
     </ion-footer-bar>

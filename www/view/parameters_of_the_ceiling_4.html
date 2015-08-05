@@ -1,7 +1,7 @@
 <div class="modal">
 <ion-pane>
 
-        <ion-header-bar class="bar bar-header bar-balanced">
+        <ion-header-bar class="bar bar-header bar-balanced" style="background-color: #233c7f;">
                 <button class="back_button" ng-click="closeTask()">
                     <i class="ion-chevron-left"></i>
                 </button>
@@ -12,7 +12,7 @@
 
         <ion-content ng-controller="pricelast">
 
-            <div class="list">
+
                 <label class="item item-input item-select">
                     <div class="input-label">
                         Количество углов, шт:
@@ -23,8 +23,8 @@
                     </select>
                 </label>
 
-            </div>
-            <div class="list">
+
+
                 <label class="item item-input item-select">
                     <div class="input-label">
                         Крепление светильника, шт:
@@ -35,11 +35,11 @@
                     </select>
                 </label>
 
-            </div>
-            <div class="list">
+
+
                 <label class="item item-input item-select">
                     <div class="input-label">
-                        Крепление люстры(потолочное)<br> шт:
+                        Крепление люстры (потолочное),<br> шт:
                     </div>
                     <select ng-model="array3[i]" ng-change="log(array3[i])">
                         <option ng-repeat="i in array3" value="{{i}}">{{i}}</option>
@@ -47,12 +47,12 @@
                     </select>
                 </label>
 
-            </div>
 
-            <div class="list">
+
+
                 <label class="item item-input item-select">
                     <div class="input-label">
-                        Крепление люстры(крючковое)<br> шт:
+                        Крепление люстры (крючковое),<br> шт:
                     </div>
                     <select ng-model="array4[i]" ng-change="log(array4[i])">
                         <option ng-repeat="i in array4" value="{{i}}">{{i}}</option>
@@ -60,8 +60,8 @@
                     </select>
                 </label>
 
-            </div>
-            <div class="list">
+
+
                 <label class="item item-input item-select">
                     <div class="input-label">
                         Криволинейные участки, м:
@@ -72,8 +72,8 @@
                     </select>
                 </label>
 
-            </div>
-            <div class="list">
+
+
                 <label class="item item-input item-select">
                     <div class="input-label">
                         Окантовка труб, шт:
@@ -82,10 +82,10 @@
                         <option ng-repeat="i in array6" value="{{i}}">{{i}}</option>
                     </select>
                 </label>
-            </div>
+
 
             <div class="next">
-                <button class="button button-balanced" ng-click="openTask()">
+                <button class="button button-balanced" ng-click="openTask()" style="background-color: #233c7f;">
                     Далеe
                 </button>
             </div>
@@ -93,7 +93,7 @@
         </ion-content>
 
         <ion-footer-bar>
-            <div class="bar bar-footer bar-balanced">
+            <div class="bar bar-footer bar-balanced" style="background-color: #233c7f;">
                 <div class="title">&copy;AstaM 2015</div>
             </div>
         </ion-footer-bar>

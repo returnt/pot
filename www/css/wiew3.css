@@ -1,8 +1,9 @@
 body{
-
+   color:  #233c7f;
 }
 html {
     font-size:100%;
+    color: #233c7f;
 }
 .bar-header{
    position: relative;
@@ -18,13 +19,14 @@ html {
 }
 .input-label{
     font-size: 1.10rem;
-    color: #49BB3E;
+    color: #233c7f;
+
 }
 .material{
     text-align: center;
     padding-top: 30px;
     font-size: 1.50rem;
-    color: #49BB3E;
+    color: #233c7f;
 }
 .next{
     text-align: center;
