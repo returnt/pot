@@ -1,0 +1,49 @@
+<div class="modal">
+  <link href="www/css/parameters_of_the_ceiling_1.css" rel="stylesheet">
+  <link rel="stylesheet" href="www/css/wiew3.css">
+
+<ion-header-bar class="bar bar-header bar-balanced">
+
+  <button class="back_button" ng-click="closeTask()">
+    <i class="ion-chevron-left"></i>
+  </button>
+  <h1 class="title" style="text-align:center; left: 0px ">Параметры потолка</h1>
+</ion-header-bar>
+
+
+  <ion-content ng-controller="vstavka">
+
+<div class="list" style="padding-top: 0px">
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Длина потолка (м)</span>
+    <input type="number" min="1" id="length_ceiling" placeholder="Длина потолка (м)"  oninput="Perimeter(), Area()">
+  </label>
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Ширина потолка (м)</span>
+    <input type="number" min="1" id="width_ceiling" placeholder="Ширина потолка (м)" oninput="Perimeter(), Area()">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label"><strong>Периметр (м)</strong></span>
+    <!--<input type="text" id="perim" placeholder="Периметр (м)" >-->
+    <p id="perim"></p>
+  </label>
+  <label class="item item-input item-stacked-label" >
+    <span class="input-label"><strong>Площадь (м²)</strong></span>
+    <!--<input type="text" placeholder="Площадь" disabled>-->
+    <p id="area"></p>
+  </label>
+</div>
+
+<div class="next">
+  <button class="button button-balanced" ng-click="openTask()">
+    Далеe
+  </button>
+</div>
+    </ion-content>
+
+  <ion-footer-bar>
+<div class="bar bar-footer bar-balanced">
+  <div class="title">&copy;AstaM 2015</div>
+</div>
+    </ion-footer-bar>
+</div>

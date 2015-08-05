@@ -1,0 +1,55 @@
+<div class="modal">
+<ion-header-bar class="bar bar-header bar-balanced">
+            <button class="back_button" ng-click="closeTask()">
+            <i class="ion-chevron-left"></i>
+            </button>
+            <h1 class="title" style="text-align: center ">Материалы</h1>
+    </ion-header-bar>
+
+        <!--content-->
+<ion-content ng-controller="dopparametr">
+        <div class="content_center">
+        <div class="material">Выберите материал:</div>
+         <div class="list materia">
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Материал:
+                </div>
+                <select class="option_select">
+                    <option class="option_size">Без материала</option>
+                    <option class="option_size">какой-то там материал1</option>
+                    <option class="option_size">какой-то там материал1</option>
+                    <option class="option_size">какой-то там материал1</option>
+                </select>
+            </label>
+         </div>
+            <div class="material">Выберите вставку:</div>
+        <div class="list vstavka">
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Вставка:
+                </div>
+                <select class="option_select">
+                    <option class="option_size">Без вставки</option>
+                    <option class="option_size">какая-то там вставка1</option>
+                    <option class="option_size">какая-то там вставка1</option>
+                    <option class="option_size">какая-то там вставка1</option>
+                </select>
+            </label>
+        </div>
+
+            <div class="next">
+                    <button class="button button-balanced" ng-click="openTask()">
+                    Далеe
+                    </button>
+            </div>
+            </div>
+    </ion-content>
+        <!--footer-->
+
+<ion-footer-bar>
+        <div class="bar bar-footer bar-balanced">
+            <div class="title">&copy;AstaM 2015</div>
+        </div>
+    </ion-footer-bar>
+</div>

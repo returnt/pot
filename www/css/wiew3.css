@@ -1,0 +1,49 @@
+body{
+
+}
+html {
+    font-size:100%;
+}
+.bar-header{
+   position: relative;
+}
+
+.gl_ekran{
+    position: relative;
+}
+.list{
+    position: relative;
+    padding-top:45px;
+    font-family:sans-serif;
+}
+.input-label{
+    font-size: 1.10rem;
+    color: #49BB3E;
+}
+.material{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 1.50rem;
+    color: #49BB3E;
+}
+.next{
+    text-align: center;
+    padding-top: 10px;
+}
+.back_button{
+    background: none;
+    border: none;
+    color: #ffffff;
+}
+.option_select{
+    font-family:sans-serif;
+}
+.content_center{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.item-text-wrap{
+    position: relative;
+}
+

@@ -1,0 +1,16 @@
+/* Empty. Add your own CSS if you like */
+.bar-header{
+    position: relative;
+}
+
+.list-inset {
+    position: relative;
+}
+/*
+div{
+    text-align: center;
+}*/
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;
+    margin:0;}

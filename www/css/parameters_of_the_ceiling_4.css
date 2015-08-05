@@ -1,0 +1,17 @@
+.sel_1{
+    width: 90%;
+    padding: 10px; /* Поля вокруг текста */
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #49BB3E;
+
+}
+
+.center{
+    text-align: center;
+}
+
+
+
