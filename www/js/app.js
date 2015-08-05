@@ -37,5 +37,83 @@ starter.controller('mainController', function($http, $scope){
                 console.log(data);
             });
     };
-});
+})
 
+.controller('area', function($scope ,$ionicModal){
+    $ionicModal.fromTemplateUrl('view/parameters_of_the_ceiling_1.html',function(modal){
+        $scope.taskModal = modal;
+    },{
+        scope: $scope,
+        animation : 'slide-in-right'
+    });
+    $scope.openTask = function(){
+        $scope.taskModal.show();
+    }
+    $scope.closeTask = function(){
+        $scope.taskModal.hide();
+    }
+})
+
+.controller('vstavka', function($scope ,$ionicModal){
+    $ionicModal.fromTemplateUrl('view/index3.html',function(modal){
+        $scope.taskModal = modal;
+    },{
+        scope: $scope,
+        animation : 'slide-in-right'
+    });
+    $scope.openTask = function(){
+        $scope.taskModal.show();
+    }
+    $scope.closeTask = function(){
+        $scope.taskModal.hide();
+    }
+})
+
+.controller('dopparametr', function($scope ,$ionicModal){
+    $ionicModal.fromTemplateUrl('view/parameters_of_the_ceiling_4.html',function(modal){
+        $scope.taskModal = modal;
+    },{
+        scope: $scope,
+        animation : 'slide-in-right'
+    });
+    $scope.openTask = function(){
+        $scope.taskModal.show();
+    }
+    $scope.closeTask = function(){
+        $scope.taskModal.hide();
+    }
+})
+
+.controller('pricelast', function($scope ,$ionicModal){
+    $ionicModal.fromTemplateUrl('view/parameters_of_the_ceiling_5.html',function(modal){
+        $scope.taskModal = modal;
+    },{
+        scope: $scope,
+        animation : 'slide-in-right'
+    });
+    $scope.openTask = function(){
+        $scope.taskModal.show();
+    }
+    $scope.closeTask = function(){
+        $scope.taskModal.hide();
+    }
+        $scope.array1 = [];
+        $scope.array2 = [];
+        $scope.array3 = [];
+        $scope.array4 = [];
+        $scope.array5 = [];
+        $scope.array6 = [];
+
+        for (var i = 1; i <= 30; i++) {
+            $scope.array1.push(i);
+            $scope.array2.push(i);
+            $scope.array3.push(i);
+            $scope.array4.push(i);
+            $scope.array5.push(i);
+            $scope.array6.push(i);
+        }
+
+        $scope.log = function(ruslan) {
+            console.log(ruslan);
+        }
+})

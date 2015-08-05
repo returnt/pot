@@ -25,12 +25,3 @@ function Area(){
     //alert(area);
     document.getElementById("area").innerHTML = area;
 }
-
-function next()
-{
-    window.location = "file:///C:/Users/Astam/Code/TabsDemo/www/index.html#/";
-}
-
-function back(){
-    window.location = "file:///C:/Users/Astam/Code/TabsDemo/www/index.html#/";
-}

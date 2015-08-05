@@ -1,0 +1,101 @@
+<div class="modal">
+<ion-pane>
+
+        <ion-header-bar class="bar bar-header bar-balanced">
+                <button class="back_button" ng-click="closeTask()">
+                    <i class="ion-chevron-left"></i>
+                </button>
+            <div>
+                <h3 class="title" style="text-align: center; left: 0px">Дополнительные елементы</h3>
+            </div>
+        </ion-header-bar>
+
+        <ion-content ng-controller="pricelast">
+
+            <div class="list">
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Количество углов, шт:
+                    </div>
+                    <select ng-model="array1[i]" ng-change="log(array1[i])">
+                        <option ng-repeat="i in array1" value="{{i}}">{{i}}</option>
+
+                    </select>
+                </label>
+
+            </div>
+            <div class="list">
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Крепление светильника, шт:
+                    </div>
+                    <select ng-model="array2[i]" ng-change="log(array2[i])">
+                        <option ng-repeat="i in array2" value="{{i}}">{{i}}</option>
+
+                    </select>
+                </label>
+
+            </div>
+            <div class="list">
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Крепление люстры(потолочное)<br> шт:
+                    </div>
+                    <select ng-model="array3[i]" ng-change="log(array3[i])">
+                        <option ng-repeat="i in array3" value="{{i}}">{{i}}</option>
+
+                    </select>
+                </label>
+
+            </div>
+
+            <div class="list">
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Крепление люстры(крючковое)<br> шт:
+                    </div>
+                    <select ng-model="array4[i]" ng-change="log(array4[i])">
+                        <option ng-repeat="i in array4" value="{{i}}">{{i}}</option>
+
+                    </select>
+                </label>
+
+            </div>
+            <div class="list">
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Криволинейные участки, м:
+                    </div>
+                    <select ng-model="array5[i]" ng-change="log(array5[i])">
+                        <option ng-repeat="i in array5" value="{{i}}">{{i}}</option>
+
+                    </select>
+                </label>
+
+            </div>
+            <div class="list">
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Окантовка труб, шт:
+                    </div>
+                    <select ng-model="array6[i]" ng-change="log(array6[i])">
+                        <option ng-repeat="i in array6" value="{{i}}">{{i}}</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="next">
+                <button class="button button-balanced" ng-click="openTask()">
+                    Далеe
+                </button>
+            </div>
+
+        </ion-content>
+
+        <ion-footer-bar>
+            <div class="bar bar-footer bar-balanced">
+                <div class="title">&copy;AstaM 2015</div>
+            </div>
+        </ion-footer-bar>
+    </ion-pane>
+</div>

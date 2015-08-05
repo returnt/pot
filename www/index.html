@@ -8,6 +8,7 @@
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/parameters_of_the_ceiling_1.css" rel="stylesheet">
     <link rel="stylesheet" href="css/wiew3.css">
+    <script src="js/parameters_of_the_ceiling_1.js"></script>
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
@@ -25,42 +26,46 @@
     <script src="js/app.js"></script>
 
 </head>
-<body ng-app="starter">
+<body ng-app="starter" ng-controller="area">
 
 <ion-pane>
 
-        <div class="bar bar-header bar-balanced">
-            <button class="back_button" onclick="back()">
+
+<ion-header>
+        <div class="bar bar-header bar-balanced" style="position: relative">
+            <button class="back_button" >
             </button>
             <h1 class="title">Калькулятор AstaM</h1>
         </div>
+</ion-header>
 
-        <div class="item item-text-wrap">
-            <div class="info">Данный калькулятор – позволяет быстро произвести расчеты:
-                <ul>
+    <ion-content style="position: relative">
+        <div>
+            <div>Данный калькулятор – позволяет быстро произвести расчеты:</div>
+                <ul style="list-style-type: square; margin-left: 20px">
                     <li> Размеров потолка;</li>
                     <li> Количество комплектующих;</li>
                     <li> Цену;</li>
                 </ul>
-                Все расчеты имеют оценочный характер, без учета формы помещения.
-            </div>
         </div>
+        <div>Все расчеты имеют оценочный характер, без учета формы помещения.</div>
 
-            <div class="item item-text-wrap"><div class="info2">Все расчеты можно выслать себе на E-mail.</div>
+            <div class="item item-text-wrap"><div style="text-align: center">Все расчеты можно выслать себе на E-mail.</div>
             </div>
 
-    <div class="item item-text-wrap">
-            <div class="info3">Позвоните нам:<br>
+    <div class="item item-text-wrap" style="top: -20px">
+            <div style="text-align: center">Позвоните нам:<br>
                 +7 (499) 643-46-33<br>
                 +7 (499) 643-46-38
             </div>
     </div>
 
     <div class="next">
-        <button class="button button-balanced">
+        <button class="button button-balanced" ng-click="openTask()">
             Далеe
         </button>
     </div>
+        </ion-content>
 
         <ion-footer-bar>
             <div class="bar bar-footer bar-balanced">
