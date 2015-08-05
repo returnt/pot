@@ -1,5 +1,6 @@
 <div class="modal">
-<ion-header-bar class="bar bar-header bar-balanced">
+
+<ion-header-bar class="bar bar-header bar-balanced" style="background-color: #233c7f">
             <button class="back_button" ng-click="closeTask()">
             <i class="ion-chevron-left"></i>
             </button>
@@ -8,6 +9,7 @@
 
         <!--content-->
 <ion-content ng-controller="dopparametr">
+    <form ng-submit="openTask(materialVal, vstavkaVal)">
         <div class="content_center">
         <div class="material">Выберите материал:</div>
          <div class="list materia">
@@ -15,11 +17,9 @@
                 <div class="input-label">
                     Материал:
                 </div>
-                <select class="option_select">
-                    <option class="option_size">Без материала</option>
-                    <option class="option_size">какой-то там материал1</option>
-                    <option class="option_size">какой-то там материал1</option>
-                    <option class="option_size">какой-то там материал1</option>
+                <select ng-model="materialVal" class="option_select" >
+                    <option disabled value="" class="option_size">Выберите материал</option>
+                    <option ng-repeat="val in material" value="{{val.id}}" class="option_size">{{val.name}}</option>
                 </select>
             </label>
          </div>
@@ -29,26 +29,25 @@
                 <div class="input-label">
                     Вставка:
                 </div>
-                <select class="option_select">
-                    <option class="option_size">Без вставки</option>
-                    <option class="option_size">какая-то там вставка1</option>
-                    <option class="option_size">какая-то там вставка1</option>
-                    <option class="option_size">какая-то там вставка1</option>
+                <select ng-model="vstavkaVal" class="option_select">
+                    <option disabled value="" class="option_size">выберите вставку</option>
+                    <option ng-repeat="val in vstavkaBaget" value="{{val.id}}" class="option_size">{{val.name}}</option>
                 </select>
             </label>
         </div>
 
             <div class="next">
-                    <button class="button button-balanced" ng-click="openTask()">
+                    <button class="button button-balanced" style="background-color: #233c7f;">
                     Далеe
                     </button>
             </div>
             </div>
+    </form>
     </ion-content>
         <!--footer-->
 
 <ion-footer-bar>
-        <div class="bar bar-footer bar-balanced">
+        <div class="bar bar-footer bar-balanced" style="background-color: #233c7f;">
             <div class="title">&copy;AstaM 2015</div>
         </div>
     </ion-footer-bar>
