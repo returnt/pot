@@ -37,23 +37,36 @@ starter.controller('area', function($scope ,$ionicModal){
     }
 })
 
-.controller('vstavka', function($scope ,$ionicModal){
-    $ionicModal.fromTemplateUrl('view/index3.html',function(modal){
-        $scope.taskModal = modal;
-    },{
-        scope: $scope,
-        animation : 'slide-in-right'
-    });
-    $scope.openTask = function(length, width, area){
-        $scope.lengthh = length;
-        $scope.width = width;
-        $scope.area = area;
-        $scope.taskModal.show();
-    }
-    $scope.closeTask = function(){
-        $scope.taskModal.hide();
-    }
-})
+    .controller('vstavka', function($scope ,$ionicModal, $timeout){
+        $ionicModal.fromTemplateUrl('view/index3.html',function(modal){
+            $scope.taskModal = modal;
+        },{
+            scope: $scope,
+            animation : 'slide-in-right'
+        });
+        $scope.openTask = function(length, width, area){
+            $scope.lengthh = length;
+            $scope.width = width;
+            $scope.area = area;
+            if(length != null && width != null || area != null){
+
+                $scope.taskModal.show();
+
+            } else {
+                $scope.attention = true;
+                $scope.att = function(){
+                    $scope.attention = !$scope.attention;
+                }
+                $timeout(function(){
+                    $scope.attention = false;
+                }, 1000);
+            }
+        };
+
+        $scope.closeTask = function(){
+            $scope.taskModal.hide();
+        }
+    })
 
 .controller('dopparametr', function($scope ,$ionicModal){
 
@@ -324,7 +337,8 @@ starter.controller('area', function($scope ,$ionicModal){
             console.log(data);
         });
     };
-});
+})
+
 
 var costPot = function($scope){
 
@@ -340,3 +354,5 @@ var costPot = function($scope){
     }
 
 }
+
+

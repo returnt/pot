@@ -33,11 +33,21 @@
       </div>
 
       <div class="next">
-        <button class="button button-balanced" type="submit" ng-click="" style="background-color: #233c7f;" >
+        <button class="button button-balanced" type="submit" ng-click=""  style="background-color: #233c7f;" ng-click="att">
           Далеe
         </button>
       </div>
     </form>
+
+      <div class="attentionWindow" ng-show="attention">
+          <div class='ng-modal-overlay' ></div>
+              <div class='ng-modal-dialog'>
+                  <div class='ng-modal-dialog-content' >
+                    Заполните все поля!
+                  </div>
+          </div>
+      </div>
+
   </ion-content>
 
   <ion-footer-bar>
