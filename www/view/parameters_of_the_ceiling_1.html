@@ -12,11 +12,11 @@
       <div class="list" style="padding-top: 0px">
         <label class="item item-input item-floating-label">
           <span class="input-label">Длина потолка (м)</span>
-          <input ng-model="length" ng-disabled="area" type="number" min="1" id="length_ceiling" placeholder="Длина потолка (м)"  oninput="Perimeter(), Area()" required>
+          <input ng-model="length" ng-disabled="area" type="number" min="1" id="length_ceiling" placeholder="Длина потолка (м)"  oninput="Perimeter(), Area()" title="Введите длину" required>
         </label>
         <label class="item item-input item-floating-label">
           <span class="input-label">Ширина потолка (м)</span>
-          <input ng-model="width" ng-disabled="area" type="number" min="1" id="width_ceiling" placeholder="Ширина потолка (м)" oninput="Perimeter(), Area()">
+          <input ng-model="width" ng-disabled="area" type="number" min="1" id="width_ceiling" placeholder="Ширина потолка (м)" oninput="Perimeter(), Area()" title="Введите ширину" required>
         </label>
         <label class="item item-input item-stacked-label">
           <span class="input-label"><strong>Периметр (м)</strong></span>

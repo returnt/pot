@@ -17,8 +17,8 @@
                 <div class="input-label">
                     Материал:
                 </div>
-                <select ng-model="materialVal" class="option_select" >
-                    <option disabled value="" class="option_size">Выберите материал</option>
+                <select ng-model="materialVal" class="option_select" title="Ввыберите материал" required>
+                    <option  disabled selected value="" class="option_size">Выберите материал</option>
                     <option ng-repeat="val in material" value="{{val.id}}" class="option_size">{{val.name}}</option>
                 </select>
             </label>
@@ -29,8 +29,8 @@
                 <div class="input-label">
                     Вставка:
                 </div>
-                <select ng-model="vstavkaVal" class="option_select">
-                    <option disabled value="" class="option_size">выберите вставку</option>
+                <select ng-model="vstavkaVal" class="option_select" title="Ввыберите вставку" required>
+                    <option disabled value="" class="option_size">Выберите вставку</option>
                     <option ng-repeat="val in vstavkaBaget" value="{{val.id}}" class="option_size">{{val.name}}</option>
                 </select>
             </label>

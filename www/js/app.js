@@ -313,16 +313,17 @@ starter.controller('area', function ($scope, $ionicModal) {
         // on-click send email
         $scope.submit = function (email, tel, cost) {
             //URL send email
-            $http.post('http://pot.returnt.ru/mail.php', {
+            $http.get('http://pot.returnt.ru/mail.php', {
                 submits: true, mail: email,
                 tel: tel, cost: cost
             }).success(function (data) {
                 //success post request
                 console.log(data);
+                console.log(email, tel, cost);
             }).error(function (data) {
                 //error
-                console.log(data);
-            });
+                console.log('Nevdacha spitkala radyans`kogo sportsmena!');
+            })
         };
     });
 
