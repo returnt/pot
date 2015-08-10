@@ -5,21 +5,21 @@
 // the 2nd parameter is an array of 'requires'
 var starter = angular.module('starter', ['ionic'])
 
-.run(function($ionicPlatform) {
-  $ionicPlatform.ready(function() {
+    .run(function($ionicPlatform) {
+        $ionicPlatform.ready(function() {
 
-    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-    // for form inputs)
-    if(window.cordova && window.cordova.plugins.Keyboard) {
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-    }
-    if(window.StatusBar) {
-      StatusBar.styleDefault();
+            // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+            // for form inputs)
+            if(window.cordova && window.cordova.plugins.Keyboard) {
+                cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+            }
+            if(window.StatusBar) {
+                StatusBar.styleDefault();
 
-    }
-  });
+            }
+        });
 
-})
+    })
 
 starter.controller('area', function($scope ,$ionicModal){
 
@@ -68,7 +68,7 @@ starter.controller('area', function($scope ,$ionicModal){
         }
     })
 
-.controller('dopparametr', function($scope ,$ionicModal, $timeout){
+    .controller('dopparametr', function($scope ,$ionicModal, $timeout){
 
         $scope.material = [
             {id: 1, value: 10, name: 'Матовое (1,5 м.) белый'},
@@ -87,35 +87,35 @@ starter.controller('area', function($scope ,$ionicModal){
             {id: 1, value: 100, name: 'Белая'},
             {id: 2, value: 200, name: 'В цвет полотна'}
         ];
-    $ionicModal.fromTemplateUrl('view/parameters_of_the_ceiling_4.html',function(modal){
-        $scope.taskModal = modal;
-    },{
-        scope: $scope,
-        animation : 'slide-in-right'
-    });
-    $scope.openTask = function(materialVal, vstavkaVal){
-        $scope.materialVal = materialVal;
-        $scope.vstavkaVal = vstavkaVal;
-        if(materialVal != null && vstavkaVal != null){
+        $ionicModal.fromTemplateUrl('view/parameters_of_the_ceiling_4.html',function(modal){
+            $scope.taskModal = modal;
+        },{
+            scope: $scope,
+            animation : 'slide-in-right'
+        });
+        $scope.openTask = function(materialVal, vstavkaVal){
+            $scope.materialVal = materialVal;
+            $scope.vstavkaVal = vstavkaVal;
+            if(materialVal != null && vstavkaVal != null){
 
-            $scope.taskModal.show();
+                $scope.taskModal.show();
 
-        } else {
-            $scope.attention = true;
-            $scope.att2 = function(){
-                $scope.attention = !$scope.attention;
+            } else {
+                $scope.attention = true;
+                $scope.att2 = function(){
+                    $scope.attention = !$scope.attention;
+                }
+                $timeout(function(){
+                    $scope.attention = false;
+                }, 1250);
             }
-            $timeout(function(){
-                $scope.attention = false;
-            }, 1250);
         }
-    }
-    $scope.closeTask = function(){
-        $scope.taskModal.hide();
-    }
-})
+        $scope.closeTask = function(){
+            $scope.taskModal.hide();
+        }
+    })
 
-.controller('pricelast', function($scope ,$ionicModal){
+    .controller('pricelast', function($scope ,$ionicModal){
 
         $scope.array1  = [
             {id: 1, value: 35, name: 4},
@@ -334,58 +334,61 @@ starter.controller('area', function($scope ,$ionicModal){
 
 
         $ionicModal.fromTemplateUrl('view/parameters_of_the_ceiling_5.html',function(modal){
-        $scope.taskModal = modal;
-    },{
-        scope: $scope,
-        animation : 'slide-in-right'
-    });
-    $scope.openTask = function(array1, array2, array3, array4, array5){
-
-        costPot($scope);
-        $scope.array1 = array1;
-        $scope.array2 = array2;
-        $scope.array3 = array3;
-        $scope.array4 = array4;
-        $scope.array5 = array5;
-        $scope.taskModal.show();
-    }
-    $scope.closeTask = function(){
-        $scope.taskModal.hide();
-    }
-
-})
-.controller('mainController', function($http, $scope){
-
-    // on-click send email
-    $scope.submit = function(email, tel, cost){
-        //URL send email
-        $http.post('http://pot.returnt.ru/mail.php', {
-            submits: true, mail: email,
-            tel: tel, cost: cost
-        }).success(function(data){
-            //success post request
-            console.log(data);
-        }).error(function(data){
-            //error
-            console.log(data);
+            $scope.taskModal = modal;
+        },{
+            scope: $scope,
+            animation : 'slide-in-right'
         });
-    };
-})
+        $scope.openTask = function(array1, array2, array3, array4, array5){
 
+            costPot($scope);
+            $scope.array1 = array1;
+            $scope.array2 = array2;
+            $scope.array3 = array3;
+            $scope.array4 = array4;
+            $scope.array5 = array5;
+            $scope.taskModal.show();
+        }
+        $scope.closeTask = function(){
+            $scope.taskModal.hide();
+        }
+
+    })
+    .controller('mainController', function($http, $scope){
+
+        // on-click send email
+        $scope.submit = function(email, tel, cost){
+            //URL send email
+            $http.post('http://pot.returnt.ru/mail.php', {
+                submits: true, mail: email,
+                tel: tel, cost: cost
+            }).success(function(data){
+                //success post request
+                console.log(data);
+            }).error(function(data){
+                //error
+                console.log(data);
+            });
+        };
+    })
 
 var costPot = function($scope){
 
     $scope.perimetr = 2 * ($scope.lengthh + $scope.width);
-    $scope.area =  $scope.lengthh * $scope.width;
+    if(isNaN($scope.perimetr)){
+        $scope.skrut = true;
+    }
+
+    //$scope.area2 =  $scope.lengthh * $scope.width;
     $scope.materials = $scope.material[$scope.materialVal-1].name;
     $scope.vstavkaBagetView = $scope.vstavkaBaget[$scope.vstavkaVal-1].name;
 
-    if($scope.perimetr != null){
-        $scope.costss = $scope.perimetr * (55) + $scope.material[$scope.materialVal-1].value + $scope.vstavkaBaget[$scope.vstavkaVal-1].value;
-    }else{
+    if($scope.area != null ) {
+        $scope.costss = $scope.area * (55) + $scope.material[$scope.materialVal - 1].value + $scope.vstavkaBaget[$scope.vstavkaVal - 1].value;
+    }else {
+        $scope.area =  $scope.lengthh * $scope.width;
         $scope.costss = $scope.area * (55) + $scope.material[$scope.materialVal-1].value + $scope.vstavkaBaget[$scope.vstavkaVal-1].value;
-    }
-
+        }
 }
 
 
