@@ -59,7 +59,7 @@ starter.controller('area', function($scope ,$ionicModal){
                 }
                 $timeout(function(){
                     $scope.attention = false;
-                }, 1000);
+                }, 1250);
             }
         };
 
@@ -68,7 +68,7 @@ starter.controller('area', function($scope ,$ionicModal){
         }
     })
 
-.controller('dopparametr', function($scope ,$ionicModal){
+.controller('dopparametr', function($scope ,$ionicModal, $timeout){
 
         $scope.material = [
             {id: 1, value: 10, name: 'Матовое (1,5 м.) белый'},
@@ -96,7 +96,19 @@ starter.controller('area', function($scope ,$ionicModal){
     $scope.openTask = function(materialVal, vstavkaVal){
         $scope.materialVal = materialVal;
         $scope.vstavkaVal = vstavkaVal;
-        $scope.taskModal.show();
+        if(materialVal != null && vstavkaVal != null){
+
+            $scope.taskModal.show();
+
+        } else {
+            $scope.attention = true;
+            $scope.att2 = function(){
+                $scope.attention = !$scope.attention;
+            }
+            $timeout(function(){
+                $scope.attention = false;
+            }, 1250);
+        }
     }
     $scope.closeTask = function(){
         $scope.taskModal.hide();

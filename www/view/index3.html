@@ -1,54 +1,64 @@
 <div class="modal">
 
-<ion-header-bar class="bar bar-header bar-balanced" style="background-color: #233c7f">
+    <ion-header-bar class="bar bar-header bar-light" style="background-color: #233c7f">
             <button class="back_button" ng-click="closeTask()">
-            <i class="ion-chevron-left"></i>
+                <i class="ion-arrow-left-a" style="font-size: 20px; vertical-align: middle"></i>
             </button>
-            <h1 class="title" style="text-align: center ">Материалы</h1>
+            <h1 class="title" style="text-align: center; color: #ffffff">Материалы</h1>
     </ion-header-bar>
 
         <!--content-->
 <ion-content ng-controller="dopparametr">
     <form ng-submit="openTask(materialVal, vstavkaVal)">
         <div class="content_center">
-        <div class="material">Выберите материал:</div>
-         <div class="list materia">
-            <label class="item item-input item-select">
-                <div class="input-label">
-                    Материал:
-                </div>
-                <select ng-model="materialVal" class="option_select" >
-                    <option disabled value="" class="option_size">Выберите материал</option>
-                    <option ng-repeat="val in material" value="{{val.id}}" class="option_size">{{val.name}}</option>
-                </select>
-            </label>
-         </div>
-            <div class="material">Выберите вставку:</div>
-        <div class="list vstavka">
-            <label class="item item-input item-select">
-                <div class="input-label">
-                    Вставка:
-                </div>
-                <select ng-model="vstavkaVal" class="option_select">
-                    <option disabled value="" class="option_size">выберите вставку</option>
-                    <option ng-repeat="val in vstavkaBaget" value="{{val.id}}" class="option_size">{{val.name}}</option>
-                </select>
-            </label>
-        </div>
+            <div class="material">Выберите материал:</div>
+             <div class="list materia">
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Материал:
+                    </div>
+                    <select ng-model="materialVal" class="option_select" >
+                        <option disabled value="" class="option_size">Выберите материал</option>
+                        <option ng-repeat="val in material" value="{{val.id}}" class="option_size">{{val.name}}</option>
+                    </select>
+                </label>
+             </div>
+                <div class="material">Выберите вставку:</div>
+            <div class="list vstavka">
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Вставка:
+                    </div>
+                    <select ng-model="vstavkaVal" class="option_select">
+                        <option disabled value="" class="option_size">выберите вставку</option>
+                        <option ng-repeat="val in vstavkaBaget" value="{{val.id}}" class="option_size">{{val.name}}</option>
+                    </select>
+                </label>
+            </div>
 
             <div class="next">
-                    <button class="button button-balanced" style="background-color: #233c7f;">
-                    Далеe
-                    </button>
+                <button class="button button-light" style="background-color: #233c7f; color: #ffffff" ng-click="att2">
+                Далеe
+                </button>
             </div>
+        </div>
+
+        <div class="attentionWindow" ng-show="attention">
+            <div class='ng-modal-overlay' ></div>
+            <div class='ng-modal-dialog'>
+                <div class='ng-modal-dialog-content' >
+                    Заполните, пожалуйста, все поля!
+                </div>
             </div>
+        </div>
+
     </form>
     </ion-content>
         <!--footer-->
 
 <ion-footer-bar>
-        <div class="bar bar-footer bar-balanced" style="background-color: #233c7f;">
-            <div class="title">&copy;AstaM 2015</div>
+        <div class="bar bar-footer bar-light" style="background-color: #233c7f;">
+            <div class="title" style="color: #ffffff"><a href="http://astam.ru/moskva/" style="text-decoration: none">&copy;AstaM 2015</a></div>
         </div>
     </ion-footer-bar>
 </div>

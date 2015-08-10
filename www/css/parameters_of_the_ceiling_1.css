@@ -17,21 +17,24 @@ input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;
 
 .ng-modal-overlay {
     /* A dark translucent div that covers the whole screen */
-    position:absolute;
-    z-index:9999;
-    top:100%;
-    left:100%;
+    position: absolute;
+    z-index:9000;
+    top:0;
+    left:0;
     width:100%;
     height:100%;
     background-color:#000000;
-    opacity: 0.5;
+    opacity: 0;
 }
 .ng-modal-dialog {
     /* A centered div above the overlay with a box shadow. */
     z-index:10000;
     position: absolute;
+    border-radius: 0.5rem;
     width: 70%;
-    height: 22%;/* Default */
+    height: 22%;
+    /*background-color: #233c7f;*/
+    background: linear-gradient(to bottom, #5773BF, #233c7f);
 
     /* Center the dialog */
     top: 50%;
@@ -40,11 +43,14 @@ input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
 
-    background-color: #fff;
-    box-shadow: 4px 4px 80px #000;
+    box-shadow: 0 0 3rem #000;
 }
 .ng-modal-dialog-content {
     text-align: center;
-    font-size: x-large;
-
+    font-size: large;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
