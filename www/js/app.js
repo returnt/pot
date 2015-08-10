@@ -37,6 +37,7 @@ starter.controller('area', function ($scope, $ionicModal) {
     }
 })
 
+<<<<<<< HEAD
     .controller('vstavka', function ($scope, $ionicModal) {
         $ionicModal.fromTemplateUrl('view/index3.html', function (modal) {
             $scope.taskModal = modal;
@@ -56,6 +57,40 @@ starter.controller('area', function ($scope, $ionicModal) {
     })
 
     .controller('dopparametr', function ($scope, $ionicModal) {
+=======
+    .controller('vstavka', function($scope ,$ionicModal, $timeout){
+        $ionicModal.fromTemplateUrl('view/index3.html',function(modal){
+            $scope.taskModal = modal;
+        },{
+            scope: $scope,
+            animation : 'slide-in-right'
+        });
+        $scope.openTask = function(length, width, area){
+            $scope.lengthh = length;
+            $scope.width = width;
+            $scope.area = area;
+            if(length != null && width != null || area != null){
+
+                $scope.taskModal.show();
+
+            } else {
+                $scope.attention = true;
+                $scope.att = function(){
+                    $scope.attention = !$scope.attention;
+                }
+                $timeout(function(){
+                    $scope.attention = false;
+                }, 1250);
+            }
+        };
+
+        $scope.closeTask = function(){
+            $scope.taskModal.hide();
+        }
+    })
+
+.controller('dopparametr', function($scope ,$ionicModal, $timeout){
+>>>>>>> 53399230fff70e783af4c9ac6bd49185654846fd
 
         $scope.material = [
             {id: 1, value: 10, name: 'Матовое (1,5 м.) белый'},
@@ -74,6 +109,7 @@ starter.controller('area', function ($scope, $ionicModal) {
             {id: 1, value: 100, name: 'Белая'},
             {id: 2, value: 200, name: 'В цвет полотна'}
         ];
+<<<<<<< HEAD
         $ionicModal.fromTemplateUrl('view/parameters_of_the_ceiling_4.html', function (modal) {
             $scope.taskModal = modal;
         }, {
@@ -89,204 +125,250 @@ starter.controller('area', function ($scope, $ionicModal) {
             $scope.taskModal.hide();
         }
     })
+=======
+    $ionicModal.fromTemplateUrl('view/parameters_of_the_ceiling_4.html',function(modal){
+        $scope.taskModal = modal;
+    },{
+        scope: $scope,
+        animation : 'slide-in-right'
+    });
+    $scope.openTask = function(materialVal, vstavkaVal){
+        $scope.materialVal = materialVal;
+        $scope.vstavkaVal = vstavkaVal;
+        if(materialVal != null && vstavkaVal != null){
+
+            $scope.taskModal.show();
+
+        } else {
+            $scope.attention = true;
+            $scope.att2 = function(){
+                $scope.attention = !$scope.attention;
+            }
+            $timeout(function(){
+                $scope.attention = false;
+            }, 1250);
+        }
+    }
+    $scope.closeTask = function(){
+        $scope.taskModal.hide();
+    }
+})
+>>>>>>> 53399230fff70e783af4c9ac6bd49185654846fd
 
     .controller('pricelast', function ($scope, $ionicModal) {
 
-        $scope.array1 = [
+        $scope.array1  = [
             {id: 1, value: 35, name: 4},
-            {id: 2, value: 82, name: 6},
-            {id: 3, value: 35, name: 7},
-            {id: 4, value: 82, name: 8},
-            {id: 5, value: 35, name: 9},
-            {id: 6, value: 82, name: 10},
-            {id: 7, value: 35, name: 11},
-            {id: 8, value: 82, name: 12},
-            {id: 9, value: 35, name: 13},
-            {id: 10, value: 82, name: 14},
-            {id: 11, value: 35, name: 15},
-            {id: 12, value: 82, name: 16},
-            {id: 13, value: 35, name: 17},
-            {id: 14, value: 82, name: 18},
-            {id: 15, value: 35, name: 19},
-            {id: 16, value: 82, name: 20},
-            {id: 17, value: 35, name: 21},
-            {id: 18, value: 82, name: 22},
-            {id: 19, value: 35, name: 23},
-            {id: 20, value: 82, name: 24},
-            {id: 21, value: 35, name: 25},
-            {id: 22, value: 82, name: 26},
-            {id: 23, value: 35, name: 27},
-            {id: 24, value: 82, name: 28},
-            {id: 25, value: 35, name: 29},
-            {id: 26, value: 82, name: 30},
-            {id: 27, value: 35, name: 31},
-            {id: 28, value: 82, name: 32},
-            {id: 29, value: 35, name: 33},
-            {id: 30, value: 82, name: 34},
+            {id: 2, value: 82, name: 5},
+            {id: 3, value: 82, name: 6},
+            {id: 4, value: 35, name: 7},
+            {id: 5, value: 82, name: 8},
+            {id: 6, value: 35, name: 9},
+            {id: 7, value: 82, name: 10},
+            {id: 8, value: 35, name: 11},
+            {id: 9, value: 82, name: 12},
+            {id: 10, value: 35, name: 13},
+            {id: 11, value: 82, name: 14},
+            {id: 12, value: 35, name: 15},
+            {id: 13, value: 82, name: 16},
+            {id: 14, value: 35, name: 17},
+            {id: 15, value: 82, name: 18},
+            {id: 16, value: 35, name: 19},
+            {id: 17, value: 82, name: 20},
+            {id: 18, value: 35, name: 21},
+            {id: 19, value: 82, name: 22},
+            {id: 20, value: 35, name: 23},
+            {id: 21, value: 82, name: 24},
+            {id: 22, value: 35, name: 25},
+            {id: 23, value: 82, name: 26},
+            {id: 24, value: 35, name: 27},
+            {id: 25, value: 82, name: 28},
+            {id: 26, value: 35, name: 29},
+            {id: 27, value: 82, name: 30},
+            {id: 28, value: 35, name: 31},
+            {id: 29, value: 82, name: 32},
+            {id: 30, value: 35, name: 33},
+            {id: 31, value: 82, name: 34}
 
         ];
+
+
         $scope.array2 = [
-            {id: 1, value: 35, name: 4},
-            {id: 2, value: 82, name: 6},
-            {id: 3, value: 35, name: 7},
-            {id: 4, value: 82, name: 8},
-            {id: 5, value: 35, name: 9},
-            {id: 6, value: 82, name: 10},
-            {id: 7, value: 35, name: 11},
-            {id: 8, value: 82, name: 12},
-            {id: 9, value: 35, name: 13},
-            {id: 10, value: 82, name: 14},
-            {id: 11, value: 35, name: 15},
-            {id: 12, value: 82, name: 16},
-            {id: 13, value: 35, name: 17},
-            {id: 14, value: 82, name: 18},
-            {id: 15, value: 35, name: 19},
-            {id: 16, value: 82, name: 20},
-            {id: 17, value: 35, name: 21},
-            {id: 18, value: 82, name: 22},
-            {id: 19, value: 35, name: 23},
-            {id: 20, value: 82, name: 24},
-            {id: 21, value: 35, name: 25},
-            {id: 22, value: 82, name: 26},
-            {id: 23, value: 35, name: 27},
-            {id: 24, value: 82, name: 28},
-            {id: 25, value: 35, name: 29},
-            {id: 26, value: 82, name: 30},
-            {id: 27, value: 35, name: 31},
-            {id: 28, value: 82, name: 32},
-            {id: 29, value: 35, name: 33},
-            {id: 30, value: 82, name: 34},
+            {id: 1, value: 35, name: 0},
+            {id: 2, value: 35, name: 1},
+            {id: 3, value: 35, name: 2},
+            {id: 4, value: 35, name: 3},
+            {id: 5, value: 35, name: 4},
+            {id: 6, value: 82, name: 5},
+            {id: 7, value: 82, name: 6},
+            {id: 8, value: 35, name: 7},
+            {id: 9, value: 82, name: 8},
+            {id: 10, value: 35, name: 9},
+            {id: 11, value: 82, name: 10},
+            {id: 12, value: 35, name: 11},
+            {id: 13, value: 82, name: 12},
+            {id: 14, value: 35, name: 13},
+            {id: 15, value: 82, name: 14},
+            {id: 16, value: 35, name: 15},
+            {id: 17, value: 82, name: 16},
+            {id: 18, value: 35, name: 17},
+            {id: 19, value: 82, name: 18},
+            {id: 20, value: 35, name: 19},
+            {id: 21, value: 82, name: 20},
+            {id: 22, value: 35, name: 21},
+            {id: 23, value: 82, name: 22},
+            {id: 24, value: 35, name: 23},
+            {id: 25, value: 82, name: 24},
+            {id: 26, value: 35, name: 25},
+            {id: 27, value: 82, name: 26},
+            {id: 28, value: 35, name: 27},
+            {id: 29, value: 82, name: 28},
+            {id: 30, value: 35, name: 29},
+            {id: 31, value: 82, name: 30},
+            {id: 32, value: 35, name: 31},
+            {id: 33, value: 82, name: 32},
+            {id: 34, value: 35, name: 33},
+            {id: 35, value: 82, name: 34}
         ];
         $scope.array3 = [
-            {id: 1, value: 35, name: 4},
-            {id: 2, value: 82, name: 6},
-            {id: 3, value: 35, name: 7},
-            {id: 4, value: 82, name: 8},
-            {id: 5, value: 35, name: 9},
-            {id: 6, value: 82, name: 10},
-            {id: 7, value: 35, name: 11},
-            {id: 8, value: 82, name: 12},
-            {id: 9, value: 35, name: 13},
-            {id: 10, value: 82, name: 14},
-            {id: 11, value: 35, name: 15},
-            {id: 12, value: 82, name: 16},
-            {id: 13, value: 35, name: 17},
-            {id: 14, value: 82, name: 18},
-            {id: 15, value: 35, name: 19},
-            {id: 16, value: 82, name: 20},
-            {id: 17, value: 35, name: 21},
-            {id: 18, value: 82, name: 22},
-            {id: 19, value: 35, name: 23},
-            {id: 20, value: 82, name: 24},
-            {id: 21, value: 35, name: 25},
-            {id: 22, value: 82, name: 26},
-            {id: 23, value: 35, name: 27},
-            {id: 24, value: 82, name: 28},
-            {id: 25, value: 35, name: 29},
-            {id: 26, value: 82, name: 30},
-            {id: 27, value: 35, name: 31},
-            {id: 28, value: 82, name: 32},
-            {id: 29, value: 35, name: 33},
-            {id: 30, value: 82, name: 34},
+            {id: 1, value: 35, name: 0},
+            {id: 2, value: 35, name: 4},
+            {id: 3, value: 82, name: 5},
+            {id: 4, value: 82, name: 6},
+            {id: 5, value: 35, name: 7},
+            {id: 6, value: 82, name: 8},
+            {id: 7, value: 35, name: 9},
+            {id: 8, value: 82, name: 10},
+            {id: 9, value: 35, name: 11},
+            {id: 10, value: 82, name: 12},
+            {id: 11, value: 35, name: 13},
+            {id: 12, value: 82, name: 14},
+            {id: 13, value: 35, name: 15},
+            {id: 14, value: 82, name: 16},
+            {id: 15, value: 35, name: 17},
+            {id: 16, value: 82, name: 18},
+            {id: 17, value: 35, name: 19},
+            {id: 18, value: 82, name: 20},
+            {id: 19, value: 35, name: 21},
+            {id: 20, value: 82, name: 22},
+            {id: 21, value: 35, name: 23},
+            {id: 22, value: 82, name: 24},
+            {id: 23, value: 35, name: 25},
+            {id: 24, value: 82, name: 26},
+            {id: 25, value: 35, name: 27},
+            {id: 26, value: 82, name: 28},
+            {id: 27, value: 35, name: 29},
+            {id: 28, value: 82, name: 30},
+            {id: 29, value: 35, name: 31},
+            {id: 30, value: 82, name: 32},
+            {id: 31, value: 35, name: 33},
+            {id: 32, value: 82, name: 34}
         ];
 
         $scope.array4 = [
-            {id: 1, value: 35, name: 4},
-            {id: 2, value: 82, name: 6},
-            {id: 3, value: 35, name: 7},
-            {id: 4, value: 82, name: 8},
-            {id: 5, value: 35, name: 9},
-            {id: 6, value: 82, name: 10},
-            {id: 7, value: 35, name: 11},
-            {id: 8, value: 82, name: 12},
-            {id: 9, value: 35, name: 13},
-            {id: 10, value: 82, name: 14},
-            {id: 11, value: 35, name: 15},
-            {id: 12, value: 82, name: 16},
-            {id: 13, value: 35, name: 17},
-            {id: 14, value: 82, name: 18},
-            {id: 15, value: 35, name: 19},
-            {id: 16, value: 82, name: 20},
-            {id: 17, value: 35, name: 21},
-            {id: 18, value: 82, name: 22},
-            {id: 19, value: 35, name: 23},
-            {id: 20, value: 82, name: 24},
-            {id: 21, value: 35, name: 25},
-            {id: 22, value: 82, name: 26},
-            {id: 23, value: 35, name: 27},
-            {id: 24, value: 82, name: 28},
-            {id: 25, value: 35, name: 29},
-            {id: 26, value: 82, name: 30},
-            {id: 27, value: 35, name: 31},
-            {id: 28, value: 82, name: 32},
-            {id: 29, value: 35, name: 33},
-            {id: 30, value: 82, name: 34},
+            {id: 1, value: 35, name: 0},
+            {id: 2, value: 35, name: 4},
+            {id: 3, value: 82, name: 5},
+            {id: 4, value: 82, name: 6},
+            {id: 5, value: 35, name: 7},
+            {id: 6, value: 82, name: 8},
+            {id: 7, value: 35, name: 9},
+            {id: 8, value: 82, name: 10},
+            {id: 9, value: 35, name: 11},
+            {id: 10, value: 82, name: 12},
+            {id: 11, value: 35, name: 13},
+            {id: 12, value: 82, name: 14},
+            {id: 13, value: 35, name: 15},
+            {id: 14, value: 82, name: 16},
+            {id: 15, value: 35, name: 17},
+            {id: 16, value: 82, name: 18},
+            {id: 17, value: 35, name: 19},
+            {id: 18, value: 82, name: 20},
+            {id: 19, value: 35, name: 21},
+            {id: 20, value: 82, name: 22},
+            {id: 21, value: 35, name: 23},
+            {id: 22, value: 82, name: 24},
+            {id: 23, value: 35, name: 25},
+            {id: 24, value: 82, name: 26},
+            {id: 25, value: 35, name: 27},
+            {id: 26, value: 82, name: 28},
+            {id: 27, value: 35, name: 29},
+            {id: 28, value: 82, name: 30},
+            {id: 29, value: 35, name: 31},
+            {id: 30, value: 82, name: 32},
+            {id: 31, value: 35, name: 33},
+            {id: 32, value: 82, name: 34}
         ];
         $scope.array5 = [
-            {id: 1, value: 35, name: 4},
-            {id: 2, value: 82, name: 6},
-            {id: 3, value: 35, name: 7},
-            {id: 4, value: 82, name: 8},
-            {id: 5, value: 35, name: 9},
-            {id: 6, value: 82, name: 10},
-            {id: 7, value: 35, name: 11},
-            {id: 8, value: 82, name: 12},
-            {id: 9, value: 35, name: 13},
-            {id: 10, value: 82, name: 14},
-            {id: 11, value: 35, name: 15},
-            {id: 12, value: 82, name: 16},
-            {id: 13, value: 35, name: 17},
-            {id: 14, value: 82, name: 18},
-            {id: 15, value: 35, name: 19},
-            {id: 16, value: 82, name: 20},
-            {id: 17, value: 35, name: 21},
-            {id: 18, value: 82, name: 22},
-            {id: 19, value: 35, name: 23},
-            {id: 20, value: 82, name: 24},
-            {id: 21, value: 35, name: 25},
-            {id: 22, value: 82, name: 26},
-            {id: 23, value: 35, name: 27},
-            {id: 24, value: 82, name: 28},
-            {id: 25, value: 35, name: 29},
-            {id: 26, value: 82, name: 30},
-            {id: 27, value: 35, name: 31},
-            {id: 28, value: 82, name: 32},
-            {id: 29, value: 35, name: 33},
-            {id: 30, value: 82, name: 34},
+            {id: 1, value: 35, name: 0},
+            {id: 2, value: 35, name: 4},
+            {id: 3, value: 82, name: 5},
+            {id: 4, value: 82, name: 6},
+            {id: 5, value: 35, name: 7},
+            {id: 6, value: 82, name: 8},
+            {id: 7, value: 35, name: 9},
+            {id: 8, value: 82, name: 10},
+            {id: 9, value: 35, name: 11},
+            {id: 10, value: 82, name: 12},
+            {id: 11, value: 35, name: 13},
+            {id: 12, value: 82, name: 14},
+            {id: 13, value: 35, name: 15},
+            {id: 14, value: 82, name: 16},
+            {id: 15, value: 35, name: 17},
+            {id: 16, value: 82, name: 18},
+            {id: 17, value: 35, name: 19},
+            {id: 18, value: 82, name: 20},
+            {id: 19, value: 35, name: 21},
+            {id: 20, value: 82, name: 22},
+            {id: 21, value: 35, name: 23},
+            {id: 22, value: 82, name: 24},
+            {id: 23, value: 35, name: 25},
+            {id: 24, value: 82, name: 26},
+            {id: 25, value: 35, name: 27},
+            {id: 26, value: 82, name: 28},
+            {id: 27, value: 35, name: 29},
+            {id: 28, value: 82, name: 30},
+            {id: 29, value: 35, name: 31},
+            {id: 30, value: 82, name: 32},
+            {id: 31, value: 35, name: 33},
+            {id: 32, value: 82, name: 34}
         ];
-        $scope.array6 = [
-            {id: 1, value: 35, name: 4},
-            {id: 2, value: 82, name: 6},
-            {id: 3, value: 35, name: 7},
-            {id: 4, value: 82, name: 8},
-            {id: 5, value: 35, name: 9},
-            {id: 6, value: 82, name: 10},
-            {id: 7, value: 35, name: 11},
-            {id: 8, value: 82, name: 12},
-            {id: 9, value: 35, name: 13},
-            {id: 10, value: 82, name: 14},
-            {id: 11, value: 35, name: 15},
-            {id: 12, value: 82, name: 16},
-            {id: 13, value: 35, name: 17},
-            {id: 14, value: 82, name: 18},
-            {id: 15, value: 35, name: 19},
-            {id: 16, value: 82, name: 20},
-            {id: 17, value: 35, name: 21},
-            {id: 18, value: 82, name: 22},
-            {id: 19, value: 35, name: 23},
-            {id: 20, value: 82, name: 24},
-            {id: 21, value: 35, name: 25},
-            {id: 22, value: 82, name: 26},
-            {id: 23, value: 35, name: 27},
-            {id: 24, value: 82, name: 28},
-            {id: 25, value: 35, name: 29},
-            {id: 26, value: 82, name: 30},
-            {id: 27, value: 35, name: 31},
-            {id: 28, value: 82, name: 32},
-            {id: 29, value: 35, name: 33},
-            {id: 30, value: 82, name: 34},
+        $scope.array6  = [
+            {id: 1, value: 35, name: 0},
+            {id: 2, value: 35, name: 4},
+            {id: 3, value: 82, name: 5},
+            {id: 4, value: 82, name: 6},
+            {id: 5, value: 35, name: 7},
+            {id: 6, value: 82, name: 8},
+            {id: 7, value: 35, name: 9},
+            {id: 8, value: 82, name: 10},
+            {id: 9, value: 35, name: 11},
+            {id: 10, value: 82, name: 12},
+            {id: 11, value: 35, name: 13},
+            {id: 12, value: 82, name: 14},
+            {id: 13, value: 35, name: 15},
+            {id: 14, value: 82, name: 16},
+            {id: 15, value: 35, name: 17},
+            {id: 16, value: 82, name: 18},
+            {id: 17, value: 35, name: 19},
+            {id: 18, value: 82, name: 20},
+            {id: 19, value: 35, name: 21},
+            {id: 20, value: 82, name: 22},
+            {id: 21, value: 35, name: 23},
+            {id: 22, value: 82, name: 24},
+            {id: 23, value: 35, name: 25},
+            {id: 24, value: 82, name: 26},
+            {id: 25, value: 35, name: 27},
+            {id: 26, value: 82, name: 28},
+            {id: 27, value: 35, name: 29},
+            {id: 28, value: 82, name: 30},
+            {id: 29, value: 35, name: 31},
+            {id: 30, value: 82, name: 32},
+            {id: 31, value: 35, name: 33},
+            {id: 32, value: 82, name: 34}
         ];
 
+<<<<<<< HEAD
         $ionicModal.fromTemplateUrl('view/parameters_of_the_ceiling_5.html', function (modal) {
             $scope.taskModal = modal;
         }, {
@@ -294,6 +376,20 @@ starter.controller('area', function ($scope, $ionicModal) {
             animation: 'slide-in-right'
         });
         $scope.openTask = function (array1, array2, array3, array4, array5) {
+=======
+        $scope.log = function(a) {
+            console.log(a);
+        };
+
+
+        $ionicModal.fromTemplateUrl('view/parameters_of_the_ceiling_5.html',function(modal){
+        $scope.taskModal = modal;
+    },{
+        scope: $scope,
+        animation : 'slide-in-right'
+    });
+    $scope.openTask = function(array1, array2, array3, array4, array5){
+>>>>>>> 53399230fff70e783af4c9ac6bd49185654846fd
 
             costPot($scope);
             $scope.array1 = array1;
@@ -310,6 +406,7 @@ starter.controller('area', function ($scope, $ionicModal) {
     })
     .controller('mainController', function ($http, $scope) {
 
+<<<<<<< HEAD
         // on-click send email
         $scope.submit = function (email, tel, cost) {
             //URL send email
@@ -326,6 +423,24 @@ starter.controller('area', function ($scope, $ionicModal) {
             })
         };
     });
+=======
+    // on-click send email
+    $scope.submit = function(email, tel, cost){
+        //URL send email
+        $http.post('http://pot.returnt.ru/mail.php', {
+            submits: true, mail: email,
+            tel: tel, cost: cost
+        }).success(function(data){
+            //success post request
+            console.log(data);
+        }).error(function(data){
+            //error
+            console.log(data);
+        });
+    };
+})
+
+>>>>>>> 53399230fff70e783af4c9ac6bd49185654846fd
 
 var costPot = function ($scope) {
 
@@ -341,3 +456,5 @@ var costPot = function ($scope) {
     }
 
 }
+
+

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html ng-app="starter">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=yes, width=device-width">
@@ -23,20 +24,17 @@
     <!-- your app's js -->
 
     <script src="js/app.js"></script>
-  </head>
-  <body ng-controller="area">
+</head>
+  <body ng-controller="area" >
 
+    <ion-header-bar class="bar bar-header bar-light" style="background-color: #233c7f;">
+        <div>
+            <h1 class="title" style="color: #ffffff; text-align: center">Калькулятор AstaM</h1>
+        </div>
+    </ion-header-bar>
 
-    <ion-header>
-            <div class="bar bar-header bar-balanced" style="position: relative; background-color: #233c7f;">
-                <button class="back_button" >
-                </button>
-                <h1 class="title">Калькулятор AstaM</h1>
-            </div>
-    </ion-header>
-
-    <ion-content style="position: relative">
-        <div style="margin: 5% 5% 5% 5%;">
+    <ion-content>
+        <div style="margin:5% 5% 5% 5%;">
             <div>Данный калькулятор – позволяет быстро произвести расчеты:</div>
                 <ul style="list-style-type: square; margin-left: 10%">
                     <li> Размеров потолка;</li>
@@ -58,19 +56,20 @@
         </div>
 
         <div class="next">
-            <button class="button button-balanced" ng-click="openTask()" style="background-color: #233c7f;">
+            <button class="button button-light" ng-click="openTask()" style="background-color: #233c7f; color: #ffffff">
                 Далеe
             </button>
         </div>
+
     </ion-content>
 
     <ion-footer-bar>
-        <div class="bar bar-footer bar-balanced" style="background-color: #233c7f;">
-            <div class="title">&copy;AstaM 2015</div>
+        <div class="bar bar-footer bar-light" style="background-color: #233c7f;">
+            <div class="title" style="color: #ffffff"><a href="http://astam.ru/moskva/" style="text-decoration: none">&copy;AstaM 2015</a></div>
         </div>
     </ion-footer-bar>
 
-</ion-pane>
+    </ion-pane>
 
 </body>
 </html>
