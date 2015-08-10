@@ -1,0 +1,58 @@
+<div class="modal">
+  <ion-header-bar class="bar bar-header bar-light" style="background-color: #233c7f;">
+    <button class="back_button" ng-click="closeTask()">
+    <i class="ion-arrow-left-a" style="font-size: 20px; vertical-align: middle"></i>
+    </button>
+    <h1 class="title" style="text-align:center; left: 0px;color: #ffffff">Параметры потолка</h1>
+  </ion-header-bar>
+
+  <ion-content ng-controller="vstavka">
+
+    <form ng-submit="openTask(length, width, area)">
+      <div class="list" style="padding-top: 0px">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Длина потолка (м)</span>
+          <input ng-model="length" ng-disabled="area" type="number" min="1" id="length_ceiling" placeholder="Длина потолка (м)"  oninput="Perimeter(), Area()">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Ширина потолка (м)</span>
+          <input ng-model="width" ng-disabled="area" type="number" min="1" id="width_ceiling" placeholder="Ширина потолка (м)" oninput="Perimeter(), Area()">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label"><strong>Периметр (м)</strong></span>
+          <p id="perim"></p>
+        </label>
+        <label class="item item-input item-stacked-label" >
+          <span class="input-label"><strong>Площадь (м²)</strong></span>
+          <p id="area"></p>
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Площадь многоугольного потолка(м²)</span>
+          <input ng-disabled="length || width" type="number" ng-model="area" min="1" id="area_another" placeholder="Введите площадь многоугольного потолка (м²)">
+        </label>
+      </div>
+
+      <div class="next">
+        <button class="button button-balanced" type="submit" ng-click=""  style="background-color: #233c7f;" ng-click="att">
+          Далеe
+        </button>
+      </div>
+    </form>
+
+      <div class="attentionWindow" ng-show="attention">
+          <div class='ng-modal-overlay' ></div>
+              <div class='ng-modal-dialog'>
+                  <div class='ng-modal-dialog-content' >
+                    Заполните, пожалуйста, все поля!
+                  </div>
+          </div>
+      </div>
+
+  </ion-content>
+
+  <ion-footer-bar>
+    <div class="bar bar-footer bar-light" style="background-color: #233c7f;">
+      <div class="title" style="color: #ffffff"><a href="http://astam.ru/moskva/" style="text-decoration: none">&copy;AstaM 2015</a></div>
+    </div>
+  </ion-footer-bar>
+</div>
