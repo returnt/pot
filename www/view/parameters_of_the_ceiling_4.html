@@ -5,7 +5,6 @@
             <button class="back_button" ng-click="closeTask()">
                 <i class="ion-chevron-left"></i>
             </button>
-<<<<<<< HEAD
         <div>
             <h3 class="title" style="text-align: center; left: 0px">Дополнительные елементы</h3>
         </div>
@@ -78,88 +77,7 @@
             </button>
         </div>
 </form>
-=======
-            <div>
-                <h3 class="title" style="text-align: center; left: 0px">Дополнительные елементы</h3>
-            </div>
-        </ion-header-bar>
-
-        <ion-content ng-controller="pricelast">
-
-            <form ng-submit="openTask(array1, array2, array3, array4, array5)">
-                <label class="item item-input item-select">
-                    <div class="input-label">
-                        Количество углов, шт:
-                    </div>
-                    <select ng-model="item1" ng-options="item1 as item1.name for item1 in array1" ng-change="log(item1)">
-                        <option value="" disabled></option>
-                    </select>
-                </label>
-
-
-
-                <label class="item item-input item-select">
-                    <div class="input-label">
-                        Крепление светильника, шт:
-                    </div>
-                    <select ng-model="item2" ng-options="item2 as item2.name for item2 in array2" ng-change="log(item2)">
-                        <option value="" disabled></option>
-                    </select>
-                </label>
-
-
-
-                <label class="item item-input item-select">
-                    <div class="input-label">
-                        Крепление люстры (потолочное),<br> шт:
-                    </div>
-                    <select ng-model="item3" ng-options="item3 as item3.name for item3 in array3" ng-change="log(item3)">
-                        <option value="" disabled></option>
-                    </select>
-                </label>
-
-
-                <label class="item item-input item-select">
-                    <div class="input-label">
-                        Крепление люстры (крючковое),<br> шт:
-                    </div>
-                    <select ng-model="item4" ng-options="item4 as item4.name for item4 in array4" ng-change="log(item4)">
-                        <option value="" disabled></option>
-                    </select>
-                </label>
-
-
-
-                <label class="item item-input item-select">
-                    <div class="input-label">
-                        Криволинейные участки, м:
-                    </div>
-                    <select ng-model="item5" ng-options="item5 as item5.name for item5 in array5" ng-change="log(item5)">
-                        <option value="" disabled></option>
-                    </select>
-                </label>
-
-
-
-                <label class="item item-input item-select">
-                    <div class="input-label">
-                        Окантовка труб, шт:
-                    </div>
-                    <select ng-model="item6" ng-options="item6 as item6.name for item6 in array6" ng-change="log(item6)">
-                        <option value="" disabled></option>
-                    </select>
-                </label>
-
-
-                <div class="next">
-                    <button class="button button-balanced" style="background-color: #233c7f;">
-                        Далеe
-                    </button>
-                </div>
-            </form>
->>>>>>> 53399230fff70e783af4c9ac6bd49185654846fd
-
-        </ion-content>
+</ion-content>
 
         <ion-footer-bar>
             <div class="bar bar-footer bar-balanced" style="background-color: #233c7f;">
