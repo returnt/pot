@@ -1,16 +1,16 @@
 <div class="modal">
-<ion-pane>
+    <ion-pane>
 
-    <ion-header-bar class="bar bar-header bar-light" style="background-color: #233c7f;">
+        <ion-header-bar class="bar bar-header bar-balanced" style="background-color: #233c7f;">
             <button class="back_button" ng-click="closeTask()">
                 <i class="ion-arrow-left-a" style="font-size: 20px; vertical-align: middle"></i>
             </button>
         <div>
-            <h3 class="title" style="text-align: center; left: 0px; color: #ffffff">Дополнительные елементы</h3>
+            <h3 class="title" style="text-align: center; right: 42px">Дополнительные елементы</h3>
         </div>
     </ion-header-bar>
 
-    <ion-content ng-controller="pricelast" >
+    <ion-content ng-controller="pricelast">
 
 <form ng-submit="openTask(array1, array2, array3, array4, array5)">
             <label class="item item-input item-select">
@@ -22,8 +22,6 @@
                 </select>
             </label>
 
-
-
             <label class="item item-input item-select">
                 <div class="input-label">
                     Крепление светильника, шт:
@@ -33,8 +31,6 @@
 
                 </select>
             </label>
-
-
 
             <label class="item item-input item-select">
                 <div class="input-label">
@@ -46,7 +42,6 @@
                 </select>
             </label>
 
-
             <label class="item item-input item-select">
                 <div class="input-label">
                     Крепление люстры (крючковое),<br> шт:
@@ -56,8 +51,6 @@
 
                 </select>
             </label>
-
-
 
             <label class="item item-input item-select">
                 <div class="input-label">
@@ -69,8 +62,6 @@
                 </select>
             </label>
 
-
-
             <label class="item item-input item-select">
                 <div class="input-label">
                     Окантовка труб, шт:
@@ -80,22 +71,18 @@
                 </select>
             </label>
 
-
         <div class="next">
-            <button class="button button-light" style="background-color: #233c7f; color: #ffffff">
+            <button class="button button-balanced" style="background-color: #233c7f;">
                 Далеe
             </button>
         </div>
-
-
 </form>
+</ion-content>
 
-    </ion-content>
-
-    <ion-footer-bar>
-        <div class="bar bar-footer bar-light" style="background-color: #233c7f;">
-            <div class="title" style="color: #ffffff"><a href="http://astam.ru/moskva/" style="text-decoration: none">&copy;AstaM 2015</a></div>
-        </div>
-    </ion-footer-bar>
-</ion-pane>
+        <ion-footer-bar>
+            <div class="bar bar-footer bar-balanced" style="background-color: #233c7f;">
+                <div class="title">&copy;AstaM 2015</div>
+            </div>
+        </ion-footer-bar>
+    </ion-pane>
 </div>

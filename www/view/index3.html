@@ -4,37 +4,37 @@
             <button class="back_button" ng-click="closeTask()">
                 <i class="ion-arrow-left-a" style="font-size: 20px; vertical-align: middle"></i>
             </button>
-            <h1 class="title" style="text-align: center; color: #ffffff">Материалы</h1>
+            <h1 class="title" style="text-align: center; right: 42px; color: #ffffff">Материалы</h1>
     </ion-header-bar>
 
         <!--content-->
 <ion-content ng-controller="dopparametr">
     <form ng-submit="openTask(materialVal, vstavkaVal)">
         <div class="content_center">
-            <div class="material">Выберите материал:</div>
-             <div class="list materia">
-                <label class="item item-input item-select">
-                    <div class="input-label">
-                        Материал:
-                    </div>
-                    <select ng-model="materialVal" class="option_select" >
-                        <option disabled value="" class="option_size">Выберите материал</option>
-                        <option ng-repeat="val in material" value="{{val.id}}" class="option_size">{{val.name}}</option>
-                    </select>
-                </label>
-             </div>
-                <div class="material">Выберите вставку:</div>
-            <div class="list vstavka">
-                <label class="item item-input item-select">
-                    <div class="input-label">
-                        Вставка:
-                    </div>
-                    <select ng-model="vstavkaVal" class="option_select">
-                        <option disabled value="" class="option_size">выберите вставку</option>
-                        <option ng-repeat="val in vstavkaBaget" value="{{val.id}}" class="option_size">{{val.name}}</option>
-                    </select>
-                </label>
-            </div>
+        <div class="material">Выберите материал*</div>
+         <div class="list materia">
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Материал:
+                </div>
+                <select ng-model="materialVal" class="option_select">
+                    <option  disabled selected value="" class="option_size">Выберите материал</option>
+                    <option ng-repeat="val in material" value="{{val.id}}" class="option_size">{{val.name}}</option>
+                </select>
+            </label>
+         </div>
+            <div class="material">Выберите вставку*</div>
+        <div class="list vstavka">
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Вставка:
+                </div>
+                <select ng-model="vstavkaVal" class="option_select">
+                    <option disabled value="" class="option_size">Выберите вставку:</option>
+                    <option ng-repeat="val in vstavkaBaget" value="{{val.id}}" class="option_size">{{val.name}}</option>
+                </select>
+            </label>
+        </div>
 
             <div class="next">
                 <button class="button button-light" style="background-color: #233c7f; color: #ffffff" ng-click="att2">
@@ -48,7 +48,7 @@
             <div class='ng-modal-overlay'></div>
             <div class='ng-modal-dialog' style="z-index:10000; position: absolute; border-radius: 0.5rem; width: 70%; height: 22%; background: linear-gradient(to bottom, #5773BF, #233c7f); top: 50%; left: 50%; transform: translate(-50%, -50%); box-shadow: 0 0 3rem #000;">
                 <div class='ng-modal-dialog-content' style="text-align: center; font-size: large; color: white; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-                    Заполните, пожалуйста, все поля!
+                    Заполните, пожалуйста, все поля со звёздочкой!
                 </div>
             </div>
         </div>

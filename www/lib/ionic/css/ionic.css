@@ -7553,6 +7553,12 @@ a.button {
   -webkit-transition: none !important;
   transition: none !important; }
 
+<<<<<<< HEAD
+.slide-in-up {
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0); }
+
+=======
 
 
 
@@ -7603,12 +7609,16 @@ a.button {
 .slide-in-up {
   -webkit-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0); }
+>>>>>>> 954575efcfcee9ce6e2ba7a2a2888fe67529c95a
 .slide-in-up.ng-enter, .slide-in-up > .ng-enter {
   -webkit-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
   transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms; }
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 954575efcfcee9ce6e2ba7a2a2888fe67529c95a
 .slide-in-up.ng-enter-active, .slide-in-up > .ng-enter-active {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
