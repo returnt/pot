@@ -333,23 +333,36 @@ starter.controller('area', function($scope ,$ionicModal){
     }
 
 })
-.controller('mainController', function($http, $scope){
+.controller('mainController', function($http, $scope, $timeout){
 
-    // on-click send email
-    $scope.submit = function(email, tel, cost){
-        //URL send email
-        $http.post('http://pot.returnt.ru/mail.php', {
-            submits: true, mail: email,
-            tel: tel, cost: cost
-        }).success(function(data){
-            //success post request
-            console.log(data);
-        }).error(function(data){
-            //error
-            console.log(data);
-        });
-    };
-})
+        // on-click send email
+        $scope.submit = function(email, tel, cost) {
+
+            if (email != null && tel != null) {
+                console.log(email);
+                //URL send email
+                $http.post('http://pot.returnt.ru/mail.php', {
+                    submits: true, mail: email,
+                    tel: tel, cost: cost
+                }).success(function (data) {
+                    //success post request
+                    console.log(data);
+                }).error(function (data) {
+                    //error
+                    console.log(data);
+                });
+
+            } else {
+                console.log("popa");
+                // "true" means attention window will be shown
+                $scope.attention5 = true;
+                // $timeout close attention window automatically within 1.250 second
+                $timeout(function () {
+                    $scope.attention5 = false;
+                }, 1250);
+            };
+        }
+});
 
 
 var costPot = function($scope){

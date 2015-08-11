@@ -43,10 +43,11 @@
             </div>
         </div>
 
+        <!--attention window-->
         <div class="attentionWindow" ng-show="attention">
-            <div class='ng-modal-overlay' ></div>
-            <div class='ng-modal-dialog'>
-                <div class='ng-modal-dialog-content' >
+            <div class='ng-modal-overlay'></div>
+            <div class='ng-modal-dialog' style="z-index:10000; position: absolute; border-radius: 0.5rem; width: 70%; height: 22%; background: linear-gradient(to bottom, #5773BF, #233c7f); top: 50%; left: 50%; transform: translate(-50%, -50%); box-shadow: 0 0 3rem #000;">
+                <div class='ng-modal-dialog-content' style="text-align: center; font-size: large; color: white; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
                     Заполните, пожалуйста, все поля!
                 </div>
             </div>

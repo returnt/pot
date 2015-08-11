@@ -33,7 +33,6 @@ input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;
     border-radius: 0.5rem;
     width: 70%;
     height: 22%;
-    /*background-color: #233c7f;*/
     background: linear-gradient(to bottom, #5773BF, #233c7f);
 
     /* Center the dialog */
