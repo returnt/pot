@@ -11,12 +11,12 @@
     <form ng-submit="openTask(length, width, area)">
       <div class="list" style="padding-top: 0px">
         <label class="item item-input item-floating-label">
-          <span class="input-label">Длина потолка (м)</span>
-          <input ng-model="length" ng-disabled="area" type="number" min="1" id="length_ceiling" placeholder="Длина потолка (м)"  oninput="Perimeter(), Area()">
+          <span class="input-label">Длина потолка (м)*</span>
+          <input ng-model="length" ng-disabled="area" type="number" min="1" id="length_ceiling" placeholder="Длина потолка (м)*"  oninput="Perimeter(), Area()">
         </label>
         <label class="item item-input item-floating-label">
-          <span class="input-label">Ширина потолка (м)</span>
-          <input ng-model="width" ng-disabled="area" type="number" min="1" id="width_ceiling" placeholder="Ширина потолка (м)" oninput="Perimeter(), Area()">
+          <span class="input-label">Ширина потолка (м)*</span>
+          <input ng-model="width" ng-disabled="area" type="number" min="1" id="width_ceiling" placeholder="Ширина потолка (м)*" oninput="Perimeter(), Area()">
         </label>
         <label class="item item-input item-stacked-label">
           <span class="input-label"><strong>Периметр (м)</strong></span>
@@ -27,8 +27,8 @@
           <p id="area"></p>
         </label>
         <label class="item item-input item-floating-label">
-          <span class="input-label">Площадь многоугольного потолка(м²)</span>
-          <input ng-disabled="length || width" type="number" ng-model="area" min="1" id="area_another" placeholder="Введите площадь многоугольного потолка (м²)">
+          <span class="input-label">Площадь многоугольного потолка(м²)*</span>
+          <input ng-disabled="length || width" type="number" ng-model="area" min="1" id="area_another" placeholder="Введите площадь многоугольного потолка (м²)*">
         </label>
       </div>
 
@@ -39,11 +39,12 @@
       </div>
     </form>
 
+      <!--attention window-->
       <div class="attentionWindow" ng-show="attention">
-          <div class='ng-modal-overlay' ></div>
-              <div class='ng-modal-dialog'>
-                  <div class='ng-modal-dialog-content' >
-                    Заполните, пожалуйста, все поля!
+          <div class='ng-modal-overlay'></div>
+              <div class='ng-modal-dialog' style="z-index:10000; position: absolute; border-radius: 0.5rem; width: 70%; height: 22%; background: linear-gradient(to bottom, #5773BF, #233c7f); top: 50%; left: 50%; transform: translate(-50%, -50%); box-shadow: 0 0 3rem #000;">
+                  <div class='ng-modal-dialog-content' style="text-align: center; font-size: large; color: white; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                    Заполните, пожалуйста, все поля со звёздочкой!
                   </div>
           </div>
       </div>
